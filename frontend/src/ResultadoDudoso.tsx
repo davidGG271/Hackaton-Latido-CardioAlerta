@@ -1,15 +1,15 @@
 import React from 'react';
-import { 
-  Heart, 
-  Activity, 
-  Home, 
-  PlusCircle, 
-  ClipboardList, 
-  Bell, 
-  MessageSquare, 
-  FileText, 
-  LineChart, 
-  BarChart2, 
+import {
+  Heart,
+  Activity,
+  Home,
+  PlusCircle,
+  ClipboardList,
+  Bell,
+  MessageSquare,
+  FileText,
+  LineChart,
+  BarChart2,
   Settings,
   HelpCircle,
   ChevronRight,
@@ -40,16 +40,16 @@ type ResultadoDudosoProps = {
   onLogout: () => void;
 };
 
-export default function ResultadoDudoso({ altitud, preductal, postductal, onBack, onLogout , onGoToReportes }: ResultadoDudosoProps) {
+export default function ResultadoDudoso({ altitud, preductal, postductal, onBack, onLogout, onGoToReportes }: ResultadoDudosoProps) {
   const formattedAltitud = altitud !== null ? altitud.toLocaleString('en-US') : '3,824';
   const diferencia = Math.abs(preductal - postductal);
 
   return (
     <div className="min-h-screen w-full flex bg-[#F8FAFC] font-sans text-[#0F1B36]">
-      
+
       {/* 2. BARRA LATERAL IZQUIERDA (Sidebar) */}
       <aside className="fixed inset-y-0 left-0 w-[260px] bg-white border-r border-[#E2E8F0] flex flex-col z-20">
-        
+
         {/* Branding */}
         <div className="p-6 pb-8">
           <div className="flex items-center gap-2 mb-2">
@@ -119,10 +119,10 @@ export default function ResultadoDudoso({ altitud, preductal, postductal, onBack
 
       {/* Main Content Area */}
       <div className="ml-[260px] flex-1 flex flex-col min-h-screen">
-        
+
         {/* 3. CABECERA Y NAVEGACIÓN SUPERIOR */}
         <header className="w-full px-8 py-4 flex justify-between items-center bg-transparent">
-          
+
           {/* Stepper (4 Pasos Completados/Resultado) */}
           <div className="flex items-center gap-2 mx-auto">
             {/* Paso 1 */}
@@ -132,9 +132,9 @@ export default function ResultadoDudoso({ altitud, preductal, postductal, onBack
               </div>
               <span className="text-[11px] font-medium text-[#64748B]">Localidad</span>
             </div>
-            
+
             <div className="w-8 xl:w-12 h-px bg-[#E2E8F0] -mt-5"></div>
-            
+
             {/* Paso 2 */}
             <div className="flex flex-col items-center">
               <div className="w-7 h-7 rounded-full bg-[#DCFCE7] flex items-center justify-center mb-1">
@@ -142,7 +142,7 @@ export default function ResultadoDudoso({ altitud, preductal, postductal, onBack
               </div>
               <span className="text-[11px] font-medium text-[#64748B]">Verificación del bebé</span>
             </div>
-            
+
             <div className="w-8 xl:w-12 h-px bg-[#E2E8F0] -mt-5"></div>
 
             {/* Paso 3 */}
@@ -154,7 +154,7 @@ export default function ResultadoDudoso({ altitud, preductal, postductal, onBack
             </div>
 
             <div className="w-8 xl:w-12 h-px bg-[#E2E8F0] -mt-5"></div>
-            
+
             {/* Paso 4 */}
             <div className="flex flex-col items-center">
               <div className="w-7 h-7 rounded-full bg-[#F59E0B] flex items-center justify-center mb-1 shadow-sm">
@@ -171,9 +171,9 @@ export default function ResultadoDudoso({ altitud, preductal, postductal, onBack
                 <p className="text-[13px] font-bold leading-tight">Dra. María Pérez</p>
                 <p className="text-[12px] text-[#64748B] leading-tight">Personal de salud</p>
               </div>
-              <img 
-                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2070&auto=format&fit=crop" 
-                alt="Avatar" 
+              <img
+                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2070&auto=format&fit=crop"
+                alt="Avatar"
                 className="w-9 h-9 rounded-full object-cover border border-[#E2E8F0]"
               />
             </div>
@@ -187,9 +187,9 @@ export default function ResultadoDudoso({ altitud, preductal, postductal, onBack
 
         {/* 4. TARJETA PRINCIPAL (Main Result Card) */}
         <main className="flex-1 px-8 pb-8 flex flex-col items-center w-full max-w-[900px] mx-auto mt-4">
-          
+
           <div className="w-full bg-white rounded-[16px] shadow-[0_4px_24px_rgb(0,0,0,0.03)] p-8">
-            
+
             {/* Encabezado de Resultado Ámbar */}
             <div className="flex items-center gap-4 mb-8">
               <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#FEF3C7] flex items-center justify-center">
@@ -205,10 +205,10 @@ export default function ResultadoDudoso({ altitud, preductal, postductal, onBack
 
             {/* Tarjeta Contenedora de Valores y Alerta */}
             <div className="w-full bg-[#FFFBEB] border border-[#FDE68A] rounded-[12px] p-6 mb-8">
-              
+
               {/* Fila Superior (2 Columnas) */}
               <div className="flex flex-col sm:flex-row items-center justify-between pb-6">
-                
+
                 {/* Izquierda (Mano derecha) */}
                 <div className="flex-1 flex flex-col items-center">
                   <div className="flex items-center gap-2 mb-2">
@@ -256,7 +256,7 @@ export default function ResultadoDudoso({ altitud, preductal, postductal, onBack
                 <div className="w-8 h-8 rounded-full bg-[#DBEAFE] flex items-center justify-center">
                   <Bot className="w-4 h-4 text-[#2563EB]" />
                 </div>
-                <h3 className="text-[15px] font-bold text-[#0F1B36]">COPILOTO ON-DEVICE (Gemini Nano / Llama)</h3>
+                <h3 className="text-[15px] font-bold text-[#0F1B36]">INTERPRETACION POR IA</h3>
               </div>
 
               {/* Caja de respuesta generada */}
@@ -293,7 +293,7 @@ export default function ResultadoDudoso({ altitud, preductal, postductal, onBack
 
             {/* Pie de Formulario (Botones) */}
             <div className="pt-6 border-t border-[#E2E8F0] flex flex-col sm:flex-row items-center justify-between gap-4">
-              <button 
+              <button
                 onClick={onBack}
                 className="flex items-center gap-2 px-6 py-2.5 rounded-lg border border-[#E2E8F0] text-[#0F1B36] font-medium hover:bg-[#F8FAFC] transition-colors text-[14px]"
               >
@@ -302,14 +302,14 @@ export default function ResultadoDudoso({ altitud, preductal, postductal, onBack
               </button>
 
               <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
-                <button 
+                <button
                   className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg border border-[#1E3A8A] text-[#1E3A8A] font-bold hover:bg-[#F0F7FF] transition-colors text-[14px]"
                 >
                   <Save className="w-4 h-4" />
                   Guardar tamizaje
                 </button>
-                
-                <button 
+
+                <button
                   className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg font-bold text-[14px] bg-[#0F1B36] hover:bg-[#1E293B] text-white transition-colors shadow-md"
                 >
                   <Clock className="w-4 h-4" />

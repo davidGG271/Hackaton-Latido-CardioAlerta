@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import bebeImg from './assets/bebe.png';
 import { 
   Heart, 
   Activity, 
@@ -335,17 +336,9 @@ export default function PreTamizaje({ onBack, onNext, onLogout , onGoToReportes 
               {/* Derecha: Ilustración e Info 35% */}
               <div className="w-full lg:w-[35%] flex flex-col items-center justify-center pt-6">
                 
-                {/* Ilustración (Mock with styling) */}
+                {/* Ilustración */}
                 <div className="relative w-full max-w-[220px] aspect-square bg-[#F8FAFC] rounded-2xl mb-6 flex items-center justify-center overflow-hidden border border-[#F1F5F9]">
-                  {/* Decorative hearts and baby shape */}
-                  <Heart className="absolute top-6 right-8 text-[#E63956] fill-[#E63956] opacity-20 w-8 h-8" />
-                  <Heart className="absolute top-12 right-24 text-[#E63956] fill-[#E63956] opacity-10 w-4 h-4" />
-                  <div className="w-32 h-32 bg-[#E2E8F0] rounded-full opacity-50 relative">
-                     <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center border border-[#E2E8F0]">
-                       <Activity className="w-5 h-5 text-[#E63956]" />
-                     </div>
-                  </div>
-                  <p className="absolute bottom-4 text-[10px] text-[#94A3B8] font-medium">Ilustración: Sensor en pie</p>
+                  <img src={bebeImg} alt="Bebé" className="w-full h-full object-cover" />
                 </div>
 
                 {/* Tarjeta Informativa */}

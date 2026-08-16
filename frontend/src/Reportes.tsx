@@ -1,4 +1,5 @@
 import React from 'react';
+import PeruMap from './PeruMap';
 import { 
   Heart, 
   Activity, 
@@ -308,6 +309,11 @@ export default function Reportes({ onNuevoTamizaje, onLogout }: ReportesProps) {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Mapa Interactivo de Perú */}
+          <div className="mb-6">
+            <PeruMap />
           </div>
 
         </main>

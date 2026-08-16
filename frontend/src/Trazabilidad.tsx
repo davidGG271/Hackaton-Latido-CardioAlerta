@@ -125,17 +125,13 @@ export default function Trazabilidad({ onLogout, onGoToReportes }: TrazabilidadP
             
             {/* Status Bar Container */}
             <div className="flex flex-col gap-3 items-end">
-              <div className="flex items-center justify-between bg-white border border-[#E2E8F0] rounded-[10px] px-3 py-1.5 min-w-[200px] shadow-sm">
+              <div className="flex items-center justify-center bg-white border border-[#E2E8F0] rounded-[10px] px-4 py-1.5 shadow-sm">
                 <div className="flex items-center gap-2">
                   <Clock className="w-3.5 h-3.5 text-[#64748B]" />
                   <span className="text-[13px] font-medium text-[#1E293B]">10:15</span>
                   <div className="w-px h-3 bg-[#E2E8F0] mx-1"></div>
                   <Wifi className="w-3.5 h-3.5 text-[#1E3A8A]" />
                   <span className="text-[13px] font-medium text-[#1E3A8A]">En línea 3G</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <BatteryMedium className="w-4 h-4 text-[#16A34A]" />
-                  <span className="text-[13px] font-medium text-[#475569]">80%</span>
                 </div>
               </div>
 
