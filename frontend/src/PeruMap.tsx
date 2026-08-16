@@ -48,6 +48,7 @@ type TooltipData = {
   dudosos: number;
   alertas: number;
   centros: number;
+  totalAlertas: number;
 };
 
 type SelectedCentro = CentroMedico | null;

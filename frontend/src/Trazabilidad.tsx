@@ -32,9 +32,8 @@ const HeartPulseIcon = ({ className = "w-6 h-6", color = "#E63956" }) => (
 );
 
 type TrazabilidadProps = {
-  onGoToReportes?: () => void;
   onLogout: () => void;
-  onGoToReportes: () => void;
+  onGoToReportes?: () => void;
 };
 
 export default function Trazabilidad({ onLogout, onGoToReportes }: TrazabilidadProps) {
